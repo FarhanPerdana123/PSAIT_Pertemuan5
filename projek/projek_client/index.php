@@ -20,7 +20,7 @@
         <?php
         $curl = curl_init();
         curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
-        curl_setopt($curl, CURLOPT_URL, 'http://10.33.35.19/projek_api.php?entity=users'); // Ganti dengan IP VPS Anda
+        curl_setopt($curl, CURLOPT_URL, 'http://10.33.35.19/projek_api/projek_api.php?entity=users'); // Ganti dengan IP VPS Anda
         $res = curl_exec($curl);
         $users = json_decode($res, true);
 
@@ -53,7 +53,7 @@
         <?php
         $curl = curl_init();
         curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
-        curl_setopt($curl, CURLOPT_URL, 'http://10.33.35.19/projek_api.php?entity=posts'); // Ganti dengan IP VPS Anda
+        curl_setopt($curl, CURLOPT_URL, 'http://10.33.35.19/projek_api/projek_api.php?entity=posts'); // Ganti dengan IP VPS Anda
         $res = curl_exec($curl);
         $posts = json_decode($res, true);
 

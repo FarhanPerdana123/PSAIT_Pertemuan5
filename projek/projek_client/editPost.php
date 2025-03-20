@@ -34,14 +34,14 @@
             var postId = new URLSearchParams(window.location.search).get('id');
 
             // Ambil data post dari API
-            $.getJSON("http://10.33.35.19/projek_api.php?entity=posts&id=" + postId, function(response) {
+            $.getJSON("http://10.33.35.19/projek_api/projek_api.php?entity=posts&id=" + postId, function(response) {
                 if (response.status === 1) {
                     var post = response.data;
                     $("#judul").val(post.judul);
                     $("#konten").val(post.konten);
 
                     // Ambil daftar users untuk dropdown
-                    $.getJSON("http://10.33.35.19/projek_api.php?entity=users", function(userResponse) {
+                    $.getJSON("http://10.33.35.19/projek_api/projek_api.php?entity=users", function(userResponse) {
                         if (userResponse.status === 1) {
                             var userOptions = '<option value="">Pilih User</option>';
                             $.each(userResponse.data, function(index, user) {
@@ -70,7 +70,7 @@
 
                 $.ajax({
                     type: "PUT",
-                    url: "http://10.33.35.19/projek_api.php?entity=posts",
+                    url: "http://10.33.35.19/projek_api/projek_api.php?entity=posts",
                     data: JSON.stringify(formData),
                     contentType: "application/json",
                     success: function(response){

@@ -42,7 +42,7 @@
 
                 $.ajax({
                     type: "POST",
-                    url: "http://10.33.35.19/projek_api.php?entity=users",
+                    url: "http://10.33.35.19/projek_api/projek_api.php?entity=users",
                     data: JSON.stringify(formData),
                     contentType: "application/json",
                     success: function(response){

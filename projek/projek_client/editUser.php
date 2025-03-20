@@ -30,7 +30,7 @@
             var userId = new URLSearchParams(window.location.search).get('id');
 
             // Ambil data user dari API
-            $.getJSON("http://10.33.35.19/projek_api.php?entity=users&id=" + userId, function(response) {
+            $.getJSON("http://10.33.35.19/projek_api/projek_api.php?entity=users&id=" + userId, function(response) {
                 if (response.status === 1) {
                     var user = response.data;
                     $("#nama").val(user.nama);
@@ -52,7 +52,7 @@
 
                 $.ajax({
                     type: "PUT",
-                    url: "http://10.33.35.19/projek_api.php?entity=users",
+                    url: "http://10.33.35.19/projek_api/projek_api.php?entity=users",
                     data: JSON.stringify(formData),
                     contentType: "application/json",
                     success: function(response){
